@@ -4,4 +4,5 @@ class FlightsController < ApplicationController
     @airlines = Airline.all
     @passengers = Passenger.all
   end
+
 end

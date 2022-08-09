@@ -4,7 +4,7 @@
 <h4> Flight #<%= flight.number %> Airline: <%= @airlines.find(flight.airline_id).name %></h4>
 <% @passengers.each do |passenger| %>
     <% if passenger.flight_ids.include?(flight.id) %>
-<p><%= passenger.name %> </p>
+      <%= passenger.name %> <%= link_to "Remove", flights_path #wait this path doesn't work%>
     <% else %>
     <% end %>
   <% end %>
