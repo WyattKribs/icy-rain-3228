@@ -1,1 +1,11 @@
 <h2> Flights </h2>
+
+<% @flights.each do |flight| %>
+<h4> Flight #<%= flight.number %> Airline: <%= @airlines.find(flight.airline_id).name %></h4>
+<% @passengers.each do |passenger| %>
+    <% if passenger.flight_ids.include?(flight.id) %>
+<p><%= passenger.name %> </p>
+    <% else %>
+    <% end %>
+  <% end %>
+<% end %>
